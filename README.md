@@ -28,3 +28,20 @@ Human only -> Shadow mode -> AI assistance -> Partial automatio -> Full automati
 | Software | 
 | Input | 
 | Output | 
+
+
+### Week 2: Select and Train a Model
+
+**How to establish a baseline?**
+
+
+<details>
+<summary>
+Click to see the answewr
+</summary>
+
+- Human level performance (HLP). Generally it's more effective for establishing the baseline on unstructured data than structured data. 
+- Literature search for state-of-the-art/open source
+- Older system
+
+</details>
