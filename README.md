@@ -5,6 +5,7 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
 ## Table of Contents 
 - [Course 1: Introduction to ML Life Cycle and Deployment](#course-1-introduction-to-ml-life-cycle-and-deployment)
     - [Week 1: Overview of the ML Lifecycle and Deployment](#week-1-overview-of-the-ml-lifecycle-and-deployment)
+    - [Week 2: Select and Train a Model](#week-2-select-and-train-a-model)
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -45,3 +46,22 @@ Click to see the answewr
 - Older system
 
 </details>
+<br />
+
+**What do precision and recall mean?**
+
+<details>
+<summary>
+Click to see the answewr
+</summary>
+
+| Metric | Formula | Layman definition 1 | Layman definition 2| 
+| -- | -- | -- | -- | 
+| Precision | $\frac{TP}{TP + FP}$ | TP / **Predicted** positive | How believable the model is when it says an instance is a positive?
+| Recal | $\frac{TP}{TP + FN}$ | TP / **Real** positive | How often was the model able to find positives?
+
+</details>
+<br />
+
+
+
