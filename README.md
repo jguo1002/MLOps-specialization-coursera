@@ -14,9 +14,9 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
 
 | Depolyment Patterns | Description |
 | -- | -- |
-| Shadow mode | 
-| Canary | 
-| Blue green | 
+| Shadow mode | Have a machine learning algorithm shadow the human inspector and run parallel with the human inspector. The learning algorithms output is not used for any decision.
+| Canary | Roll out to a small fraction of traffic. Then either gradually ramp up (if it’s going well) or rollback (if not) 
+| Blue green | Assign traffic to a green (new) deployment from a blue (old) deployment
 
 **Degree of automation**
 
