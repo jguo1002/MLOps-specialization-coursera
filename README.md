@@ -26,9 +26,9 @@ Human only -> Shadow mode -> AI assistance -> Partial automatio -> Full automati
 
 | Type of Metrics | Metric Examples | 
 | -- | -- | 
-| Software | 
-| Input | 
-| Output | 
+| Software | Memory, compute, latency, throughput, server load | 
+| Input | Avg input lenght, avg input volume, Num missing values, Avg image brightness
+| Output | # times retrun "" (null), # times user redoes search, # times user switch to typing, CTR
 
 
 ### Week 2: Select and Train a Model
