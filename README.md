@@ -7,6 +7,7 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
     - [Week 1: Overview of the ML Lifecycle and Deployment](#week-1-overview-of-the-ml-lifecycle-and-deployment)
     - [Week 2: Select and Train a Model](#week-2-select-and-train-a-model)
     - [Week 3: Data Labeling](#week-3-data-labeling)
+- []()
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -77,3 +78,14 @@ Click to see the answewr
 > - Tools: extensive documention, tensorflow transform
 
 [⬆️ Back to Top](#table-of-contents)
+
+## Course 2: Machine Learning Data Lifecycle in Production
+
+### Week 1: Collecting, Labeling and Validating Data 
+
+**What are the examples where ML systems fail the users it serves?**
+
+> - Representation harm: a system amplifies or reflects a negative stereotype about particular groups
+> - Opportunity denial: a system makes predictions that have negative real life consequences that could result in lasting impacts. 
+> - Disproportionate product failure: outputs are skewed for particular groups of users. 
+> - Harm by disadvantage: system infers disadvantageous associations between different demographic characteristics and the user behaviors.
