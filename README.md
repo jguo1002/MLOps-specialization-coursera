@@ -89,3 +89,17 @@ Click to see the answewr
 > - Opportunity denial: a system makes predictions that have negative real life consequences that could result in lasting impacts. 
 > - Disproportionate product failure: outputs are skewed for particular groups of users. 
 > - Harm by disadvantage: system infers disadvantageous associations between different demographic characteristics and the user behaviors.
+
+**What is direct labeling? What are its pros and cons?**
+
+> A way of continuously creating new training data to use in the model. It takes the features themselves from the inference requests that the model is getting. E.g., actual clicks and predicted clicks. 
+>
+> Pros: 
+> - continous training data creation
+> - labels evolve quickly
+> - strong label signals
+> 
+> Cons:
+> - the inherent nature of the problem
+> - failure to capture ground truth
+> - custom design
