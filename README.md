@@ -103,3 +103,49 @@ Click to see the answewr
 > - the inherent nature of the problem
 > - failure to capture ground truth
 > - custom design
+
+```
+Data issues
+├── Drift
+│   ├── Data drift
+│   └── Concept drift
+├── Skew
+│   ├── Schema skew
+│   └── Distribution skew
+```
+**What is drift and skew?**
+<details>
+<summary>
+Click to see the answewr
+</summary>
+
+> Drift: Changes in data over time, such as data collected once a day
+> 
+> Skew: Differences between two static versions, or different sources, e.g., training v.s. serving set
+
+</details>
+</br>
+
+**What is data drift and concept drift?**
+
+> Data drift: changes in the statistical properties of the features due to seasonality, trend, or unexpected events.
+> 
+> Concept drift: a change in statistical properties of the labels over time. The mapping found during training is no longer valid. 
+
+**What is schema skew and distribution skew?**
+
+> Schema skew: the training and schema as serving data do not conform to the same schema. e.g., integer -> float, string -> category.
+> 
+> Distribution skew: a divergence of training and serving datasets.
+
+**What is data shift, covariate shift, and concept shift？**
+
+| Type | Changed | Unchanged | 
+| -- | -- | -- |
+| Data shift | joint probability of x and y  |  | 
+| Covariate shift | marginal distribution of x  | conditional distribution of y given x  |
+| Concept shift | conditional distribution of y given x | marginal distribution of x
+
+
+
+[⬆️ Back to Top](#table-of-contents)
