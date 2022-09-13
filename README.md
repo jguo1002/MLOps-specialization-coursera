@@ -111,32 +111,30 @@ Data issues
 │   └── Concept drift
 ├── Skew
 │   ├── Schema skew
+│   ├── Feature skew
 │   └── Distribution skew
 ```
 **What is drift and skew?**
-<details>
-<summary>
-Click to see the answewr
-</summary>
 
-> Drift: Changes in data over time, such as data collected once a day
-> 
-> Skew: Differences between two static versions, or different sources, e.g., training v.s. serving set
-
-</details>
-</br>
+| Concept | Definiton | 
+| -- | -- |
+| Drift | Changes in data over time, such as data collected once a day |
+| Skew | Differences between two static versions, or different sources, e.g., training v.s. serving set | 
 
 **What is data drift and concept drift?**
 
-> Data drift: changes in the statistical properties of the features due to seasonality, trend, or unexpected events.
-> 
-> Concept drift: a change in statistical properties of the labels over time. The mapping found during training is no longer valid. 
+| Concept | Definiton | 
+| -- | -- |
+| Data drift | Changes in the statistical properties of the features due to seasonality, trend, or unexpected events | 
+| Concept drift | Changes in statistical properties of the labels over time. The mapping found during training is no longer valid |
 
 **What is schema skew and distribution skew?**
 
-> Schema skew: the training and schema as serving data do not conform to the same schema. e.g., integer -> float, string -> category.
-> 
-> Distribution skew: a divergence of training and serving datasets.
+| Concept | Definiton | Probably caused by | 
+| -- | -- | -- |
+| Schema skew | The training and schema as serving data do not conform to the same schema. e.g., integer -> float, string -> category |  | 
+| Feature skew | Changes in the feature values between training and serving | A data source that provides some feature values is modified between training and serving time <br/> Different logic for generating features, e.g., transformation only in one of the two code paths | 
+| Distribution skew | A divergence of training and serving datasets. The changes in distribution of individual features, e.g., range 1-100 in training changed to 5-600 in serving.  | Faulty sampling method during training <br/> Different data sources for training and serving data <br/> Trend, seasonality, changes in data over time | 
 
 **What is data shift, covariate shift, and concept shift？**
 
@@ -146,6 +144,8 @@ Click to see the answewr
 | Covariate shift | marginal distribution of x  | conditional distribution of y given x  |
 | Concept shift | conditional distribution of y given x | marginal distribution of x
 
+**What measure is typically used to determine the degree of data drift?**
 
+> Chebyshev distance (L-infinity)
 
 [⬆️ Back to Top](#table-of-contents)
