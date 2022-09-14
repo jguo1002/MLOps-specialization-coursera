@@ -7,7 +7,9 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
     - [Week 1: Overview of the ML Lifecycle and Deployment](#week-1-overview-of-the-ml-lifecycle-and-deployment)
     - [Week 2: Select and Train a Model](#week-2-select-and-train-a-model)
     - [Week 3: Data Labeling](#week-3-data-labeling)
-- []()
+- [Course 2: Machine Learning Data Lifecycle in Production](#course-2-machine-learning-data-lifecycle-in-production)
+    - [Week 1: Collecting, Labeling and Validating Data](#week-1-collecting-labeling-and-validating-data)
+    - [Week 2: Feature Engineering, Transformation and Selection](#week-2-feature-engineering-transformation-and-selection)
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -133,7 +135,7 @@ Data issues
 | Concept | Definiton | Probably caused by | 
 | -- | -- | -- |
 | Schema skew | The training and schema as serving data do not conform to the same schema. e.g., integer -> float, string -> category |  | 
-| Feature skew | Changes in the feature values between training and serving | A data source that provides some feature values is modified between training and serving time <br/> Different logic for generating features, e.g., transformation only in one of the two code paths | 
+| Feature skew | Changes in the feature values between training and serving | A data source that provides some feature values is modified between training and serving time <br/> Different logic for generating features, e.g., transformation only in one of the two code paths, Java v.s. Python| 
 | Distribution skew | A divergence of training and serving datasets. The changes in distribution of individual features, e.g., range 1-100 in training changed to 5-600 in serving.  | Faulty sampling method during training <br/> Different data sources for training and serving data <br/> Trend, seasonality, changes in data over time | 
 
 **What is data shift, covariate shift, and concept shift？**
@@ -149,3 +151,16 @@ Data issues
 > Chebyshev distance (L-infinity)
 
 [⬆️ Back to Top](#table-of-contents)
+
+### Week 2: Feature Engineering, Transformation and Selection
+
+Transformation 
+Training: Full pass requires the entire dataset
+Serving: Instance level
+
+**When to do transformation and what are the pros and cons?**
+| When | Pros | Cons |
+| -- | -- | -- |
+| Preprocess trainset | Run once <br> Compute on entire | Transformations reproduced at serving <br> Slow iteration, each time make a change need to do a full pass | 
+| Within model | Easy iteration, part of the model <br> Guarantee the transformation | Expensive <br> Long model latency, GPU in training but CPU in serving <br> Batch transform skew |
+
