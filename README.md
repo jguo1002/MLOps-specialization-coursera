@@ -164,3 +164,6 @@ Serving: Instance level
 | Preprocess trainset | Run once <br> Compute on entire | Transformations reproduced at serving <br> Slow iteration, each time make a change need to do a full pass | 
 | Within model | Easy iteration, part of the model <br> Guarantee the transformation | Expensive <br> Long model latency, GPU in training but CPU in serving <br> Batch transform skew |
 
+**What is feature cross?**
+
+> It combines multiple features into a new feature. 
