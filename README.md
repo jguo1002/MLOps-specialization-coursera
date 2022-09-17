@@ -167,3 +167,19 @@ Serving: Instance level
 **What is feature cross?**
 
 > It combines multiple features into a new feature. 
+
+**What are supervised feature selection methods and what are their differences?**
+
+| Method | Sub-method | How-to | Model-related | 
+| -- | -- | -- | -- |  
+| Filter | Correlation | Select features correlated with label, remove mutual correlated features | No |
+|  | Univariate | Selecting the best features based on univariate statistical tests, e.g., Anova F-test | No |
+| Wrapper | Forward | Add features one by one | Yes |
+|  | Backward  | Start with all features, remove one by one | Yes |
+|  | Recursive (RFE) | Fit the model and  rank important features, remove least important ones until the desired feature number | Yes |
+| Embedded | L1 / L2 regularization | Introduces a penalty term to the loss function which leads to the least important features being eliminated | Yes |
+|  | Feature importance | Assign scores and drop features scored lower than importance | Yes |
+|  |  |
+
+Pearson, Kendall Tau Rank, Spearman
+F-test, mutual information, Chi square
