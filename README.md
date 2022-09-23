@@ -10,6 +10,7 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
 - [Course 2: Machine Learning Data Lifecycle in Production](#course-2-machine-learning-data-lifecycle-in-production)
     - [Week 1: Collecting, Labeling and Validating Data](#week-1-collecting-labeling-and-validating-data)
     - [Week 2: Feature Engineering, Transformation and Selection](#week-2-feature-engineering-transformation-and-selection)
+    - [Week 3: Data Journey and Data Storage](#week-3-data-journey-and-data-storage)
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -183,3 +184,28 @@ Serving: Instance level
 
 Pearson, Kendall Tau Rank, Spearman
 F-test, mutual information, Chi square
+
+[⬆️ Back to Top](#table-of-contents)
+
+
+### Week 3: Data Journey and Data Storage 
+
+**Differences between databsae, data warehouse, and data lake?**
+
+|  | Database | Data Warehouse | Data Lake |
+| -- | -- | -- | -- |
+| Definition |  | subject-oriented repository of structured data optimized for fast read | repository of data stored in its natural and raw format | 
+| Sources |  | multiple | multiple | 
+| Data processing | OLAP | OLTP | 
+| Store historical data | ❌ | ✅ | ✅ |
+| Data size | gigabytes | >= terabytes | 
+| Queries | simple, for transaction | complex, for analysis | 
+| Query execution | real-time | long run | 
+| Tables normalized | ✅ | ❌ |  | 
+| Structured only? | semi-structured |  ✅ | ❌ | 
+| Data format |  |  | JSON, BSON, CSV, TSV, Avro, ORC, and Parquet |
+| Data Structure |  | Processed | Raw | 
+| Users |  | Business professionals | Data scientists | 
+| Examples | MySQL, MongoDB | Amazon Redshift, Google BigQuery, IBM Db2 Warehouse, MS Azure Synapse | MongoDB Atlas Data Lake, AWS Athenal, Databricks SQL Analytics | 
+|  |  |  |
+ 
