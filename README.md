@@ -194,18 +194,27 @@ F-test, mutual information, Chi square
 
 |  | Database | Data Warehouse | Data Lake |
 | -- | -- | -- | -- |
-| Definition |  | subject-oriented repository of structured data optimized for fast read | repository of data stored in its natural and raw format | 
-| Sources |  | multiple | multiple | 
-| Data processing | OLAP | OLTP | 
+| Definition | a storage location that houses structured data | subject-oriented repository of structured data optimized for fast read | repository of data stored in its natural and raw format | 
+| Sources | Single | Multiple | Multiple | 
+| Data processing | OLTP |  OLAP | OLAP  |
 | Store historical data | ❌ | ✅ | ✅ |
-| Data size | gigabytes | >= terabytes | 
-| Queries | simple, for transaction | complex, for analysis | 
-| Query execution | real-time | long run | 
-| Tables normalized | ✅ | ❌ |  | 
+| Data size | gigabytes | >= terabytes | petabytes!
+| Queries | simple, for transaction | complex, for analysis | complex 
+| Query execution | real-time | long run | depends on the service
+| Tables normalized | ✅ | ❌ | ❌ | 
 | Structured only? | semi-structured |  ✅ | ❌ | 
-| Data format |  |  | JSON, BSON, CSV, TSV, Avro, ORC, and Parquet |
-| Data Structure |  | Processed | Raw | 
-| Users |  | Business professionals | Data scientists | 
+| Data Structure | Processed | Processed | Raw | 
+| Users | Customer / dev / professionals | Business professionals | Data scientists | 
 | Examples | MySQL, MongoDB | Amazon Redshift, Google BigQuery, IBM Db2 Warehouse, MS Azure Synapse | MongoDB Atlas Data Lake, AWS Athenal, Databricks SQL Analytics | 
 |  |  |  |
- 
+
+Reference: 
+- [Databases vs. Data Warehouses vs. Data Lakes](https://www.mongodb.com/databases/data-lake-vs-data-warehouse-vs-database)
+
+**Schemas are relational objects summarizing the features in a dataset including ____**
+> - Feature name
+> - Feature type
+> - Required or optional
+> - Valency
+> - Domain
+> - Default values
