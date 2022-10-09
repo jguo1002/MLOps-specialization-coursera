@@ -9,8 +9,17 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
     - [Week 3: Data Labeling](#week-3-data-labeling)
 - [Course 2: Machine Learning Data Lifecycle in Production](#course-2-machine-learning-data-lifecycle-in-production)
     - [Week 1: Collecting, Labeling and Validating Data](#week-1-collecting-labeling-and-validating-data)
+        - Lab: TFDV exercise
+        - Programming: Data validation
     - [Week 2: Feature Engineering, Transformation and Selection](#week-2-feature-engineering-transformation-and-selection)
+        - Lab: Simple feature engineering
+        - Lab: Feature engineering pipeline
+        - Lab: Feature selection
+        - Programming: Feature engineering
     - [Week 3: Data Journey and Data Storage](#week-3-data-journey-and-data-storage)
+        - Lab: ML metadata
+        - Lab: Iterative schema
+        - Programming: Data pipeline components for production ML
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -171,15 +180,23 @@ Serving: Instance level
 
 **What are supervised feature selection methods and what are their differences?**
 
-| Method | Sub-method | How-to | Model-related | 
-| -- | -- | -- | -- |  
-| Filter | Correlation | Select features correlated with label, remove mutual correlated features | No |
-|  | Univariate | Selecting the best features based on univariate statistical tests, e.g., Anova F-test | No |
-| Wrapper | Forward | Add features one by one | Yes |
-|  | Backward  | Start with all features, remove one by one | Yes |
-|  | Recursive (RFE) | Fit the model and  rank important features, remove least important ones until the desired feature number | Yes |
-| Embedded | L1 / L2 regularization | Introduces a penalty term to the loss function which leads to the least important features being eliminated | Yes |
-|  | Feature importance | Assign scores and drop features scored lower than importance | Yes |
+| Method | Definition | Model-related | 
+| -- | -- | -- |
+| Filter | use statistical methods to rank a given set of features | No |
+| Wrapper | use a model to measure the effectiveness of a particular subset of features | Yes |
+| Embedded | implemented by algorithms with own built-in feature selection methods | Yes |
+| | | 
+
+
+| Method | Sub-method | How-to | 
+| -- | -- | -- | 
+| Filter | Correlation | Select features correlated with label, remove mutual correlated features | 
+|  | Univariate | Selecting the best features based on univariate statistical tests, e.g., Anova F-test | 
+| Wrapper | Forward | Add features one by one | 
+|  | Backward  | Start with all features, remove one by one | 
+|  | Recursive (RFE) | Fit the model and  rank important features, remove least important ones until the desired feature number | 
+| Embedded | L1 / L2 regularization | Introduces a penalty term to the loss function which leads to the least important features being eliminated | 
+|  | Feature importance | Assign scores and drop features scored lower than importance | 
 |  |  |
 
 Pearson, Kendall Tau Rank, Spearman
