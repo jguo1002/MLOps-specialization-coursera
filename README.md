@@ -20,6 +20,10 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
         - Lab: ML metadata
         - Lab: Iterative schema
         - Programming: Data pipeline components for production ML
+    - [Week 4: Advanced Labeling, Augmentation and Data Preprocessing](#week-4-advanced-labeling-augmentation-and-data-preprocessing)
+        - Lab: Feature engineering with weather data
+        - Lab: Feature engineering with accelerometer data
+        - Lab: Feature engineering with images
 
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
@@ -235,3 +239,15 @@ Reference:
 > - Valency
 > - Domain
 > - Default values
+
+[⬆️ Back to Top](#table-of-contents)
+
+### Week 4: Advanced Labeling, Augmentation and Data Preprocessing
+
+**What are the techniques of active learning sampling?**
+| Sampling method | How | 
+| -- | -- | 
+| Margin sampling | Label points the current model is least confident in | 
+| Cluster-based sampling | sample from well-formed clusters to "cover" the entire space | 
+| Query-by-committee | trian an ensemble of models and sample points that generate disagreement | 
+| Region-based sampling | Runs several active learning algorithms in different partitions of the space |  
