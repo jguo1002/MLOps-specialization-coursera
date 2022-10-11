@@ -251,3 +251,22 @@ Reference:
 | Cluster-based sampling | sample from well-formed clusters to "cover" the entire space | 
 | Query-by-committee | trian an ensemble of models and sample points that generate disagreement | 
 | Region-based sampling | Runs several active learning algorithms in different partitions of the space |  
+
+**What are differences of several popular advanced labeling methods?**
+| Method | Label generation methods | 
+| -- | -- | 
+| Semi-supervised | Human label a small subset of data, propagate to large set based on similarity or community structure | 
+| Active learning | Select the points to be labeled that would be most informative for model training | 
+| Weak supervision | heuristics or labelling functions
+
+
+**What would be a striking caveat or shortcoming of interpreting a video just as a series of images?**
+
+<details>
+<summary>
+Click to see the answewr
+</summary>
+Losing the semantic context coming from the sequence of events.
+
+</details>
+<br />
