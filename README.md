@@ -24,7 +24,8 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
         - Lab: Feature engineering with weather data
         - Lab: Feature engineering with accelerometer data
         - Lab: Feature engineering with images
-
+- [Course 3: Machine Learning Modeling Pipelines in Production](#course-3-machine-learning-modeling-pipelines-in-production)
+    - [Week 1: Neural Architecture Search](#week-1-neural-architecture-search)
 
 ## Course 1: Introduction to ML Life Cycle and Deployment
 
@@ -259,6 +260,7 @@ Reference:
 | Active learning | Select the points to be labeled that would be most informative for model training | 
 | Weak supervision | heuristics or labelling functions
 
+It uses generative models to determine weights for supervision sources
 
 **What would be a striking caveat or shortcoming of interpreting a video just as a series of images?**
 
@@ -270,3 +272,10 @@ Losing the semantic context coming from the sequence of events.
 
 </details>
 <br />
+
+
+## Course 3: Machine Learning Modeling Pipelines in Production
+
+### Week 1: Neural Architecture Search 
+
+
