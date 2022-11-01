@@ -278,4 +278,13 @@ Losing the semantic context coming from the sequence of events.
 
 ### Week 1: Neural Architecture Search 
 
+**What are search strategies in NAS and how do they wrok?**
 
+
+| Search Method | Desc | 
+| -- | -- | 
+| Grid search | Exhaustively search all the combinations of hyperparameters | 
+| Random search | Each iteration tries a random combination
+| Bayesian Optimization | Assume a distribution 
+| Evolutionary algo | N initial model architectures are randomly generated; X highest generations are selected as parents for the generation; evaluated, Y architectures are selected to be removed from the population; the offsprings replaces the removed architectures and the process restarts from the new population | 
+| Reinforcement learning | agent, sample architecture with some prob; accuracy determines reward; get policy gradient to update the controller RNN
