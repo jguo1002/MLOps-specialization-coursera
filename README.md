@@ -9,21 +9,21 @@ Machine Learning Engineering for Production (MLOps) Specialization on Coursera
     - [Week 3: Data Labeling](#week-3-data-labeling)
 - [Course 2: Machine Learning Data Lifecycle in Production](#course-2-machine-learning-data-lifecycle-in-production)
     - [Week 1: Collecting, Labeling and Validating Data](#week-1-collecting-labeling-and-validating-data)
-        - Lab: TFDV exercise
-        - Programming: Data validation
+        - Lab: TFDV exercise ([Census Income Data Set](http://archive.ics.uci.edu/ml/datasets/Census+Income))
+        - Programming: Data validation ([Diabetes 130-US hospitals for years 1999-2008 Data Set](https://archive.ics.uci.edu/ml/datasets/diabetes+130-us+hospitals+for+years+1999-2008))
     - [Week 2: Feature Engineering, Transformation and Selection](#week-2-feature-engineering-transformation-and-selection)
         - Lab: Simple feature engineering
         - Lab: Feature engineering pipeline
-        - Lab: Feature selection
-        - Programming: Feature engineering
+        - Lab: Feature selection ([Breast Cancer Wisconsin (Diagnostic) Data Set](http://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+%28diagnostic%29))
+        - Programming: Feature engineering ([Metro Interstate Traffic Volume Data Set](https://archive.ics.uci.edu/ml/datasets/Metro+Interstate+Traffic+Volume))
     - [Week 3: Data Journey and Data Storage](#week-3-data-journey-and-data-storage)
         - Lab: ML metadata
         - Lab: Iterative schema
         - Programming: Data pipeline components for production ML
     - [Week 4: Advanced Labeling, Augmentation and Data Preprocessing](#week-4-advanced-labeling-augmentation-and-data-preprocessing)
-        - Lab: Feature engineering with weather data
-        - Lab: Feature engineering with accelerometer data
-        - Lab: Feature engineering with images
+        - Lab: Feature engineering with weather data ([Weather Dataset](https://www.bgc-jena.mpg.de/wetter/))
+        - Lab: Feature engineering with accelerometer data ([WISDM Human Activity Recognition Dataset](https://www.cis.fordham.edu/wisdm/dataset.php))
+        - Lab: Feature engineering with images ([CIFAR-10](https://www.tensorflow.org/datasets/catalog/cifar10), [link2](https://www.cs.toronto.edu/~kriz/cifar.html))
 - [Course 3: Machine Learning Modeling Pipelines in Production](#course-3-machine-learning-modeling-pipelines-in-production)
     - [Week 1: Neural Architecture Search](#week-1-neural-architecture-search)
 
@@ -49,6 +49,7 @@ Human only -> Shadow mode -> AI assistance -> Partial automatio -> Full automati
 | Input | Avg input lenght, avg input volume, Num missing values, Avg image brightness
 | Output | # times retrun "" (null), # times user redoes search, # times user switch to typing, CTR
 
+</br>
 
 ### Week 2: Select and Train a Model
 
@@ -131,6 +132,8 @@ Data issues
 │   ├── Feature skew
 │   └── Distribution skew
 ```
+</br>
+
 **What is drift and skew?**
 
 | Concept | Definiton | 
@@ -138,12 +141,16 @@ Data issues
 | Drift | Changes in data over time, such as data collected once a day |
 | Skew | Differences between two static versions, or different sources, e.g., training v.s. serving set | 
 
+</br>
+
 **What is data drift and concept drift?**
 
 | Concept | Definiton | 
 | -- | -- |
 | Data drift | Changes in the statistical properties of the features due to seasonality, trend, or unexpected events | 
 | Concept drift | Changes in statistical properties of the labels over time. The mapping found during training is no longer valid |
+
+</br>
 
 **What is schema skew and distribution skew?**
 
@@ -163,9 +170,11 @@ Data issues
 
 **What measure is typically used to determine the degree of data drift?**
 
-> Chebyshev distance (L-infinity)
+> [Chebyshev distance](https://en.wikipedia.org/wiki/Chebyshev_distance) (L-infinity)
 
 [⬆️ Back to Top](#table-of-contents)
+
+</br>
 
 ### Week 2: Feature Engineering, Transformation and Selection
 
@@ -182,6 +191,8 @@ Serving: Instance level
 **What is feature cross?**
 
 > It combines multiple features into a new feature. 
+
+<br />
 
 **What are supervised feature selection methods and what are their differences?**
 
@@ -243,7 +254,19 @@ Reference:
 
 [⬆️ Back to Top](#table-of-contents)
 
+</br>
+
 ### Week 4: Advanced Labeling, Augmentation and Data Preprocessing
+
+**What are differences of several popular advanced labeling methods?**
+| Method | Label generation methods | 
+| -- | -- | 
+| Semi-supervised | Human label a small subset of data, propagate to large set based on similarity or community structure | 
+| Active learning | Select samples to be labeled that would be most informative for model training | 
+| Weak supervision | Use heuristics and labelling functions provided by subject matter experts to apply noisy labels to unlabeled examples heuristics 
+
+> Weak supervision objective: learn a generative model to determine weights for weak supervision sources
+
 
 **What are the techniques of active learning sampling?**
 | Sampling method | How | 
@@ -252,15 +275,6 @@ Reference:
 | Cluster-based sampling | sample from well-formed clusters to "cover" the entire space | 
 | Query-by-committee | trian an ensemble of models and sample points that generate disagreement | 
 | Region-based sampling | Runs several active learning algorithms in different partitions of the space |  
-
-**What are differences of several popular advanced labeling methods?**
-| Method | Label generation methods | 
-| -- | -- | 
-| Semi-supervised | Human label a small subset of data, propagate to large set based on similarity or community structure | 
-| Active learning | Select the points to be labeled that would be most informative for model training | 
-| Weak supervision | heuristics or labelling functions
-
-It uses generative models to determine weights for supervision sources
 
 **What would be a striking caveat or shortcoming of interpreting a video just as a series of images?**
 
@@ -288,3 +302,4 @@ Losing the semantic context coming from the sequence of events.
 | Bayesian Optimization | Assume a distribution 
 | Evolutionary algo | N initial model architectures are randomly generated; X highest generations are selected as parents for the generation; evaluated, Y architectures are selected to be removed from the population; the offsprings replaces the removed architectures and the process restarts from the new population | 
 | Reinforcement learning | agent, sample architecture with some prob; accuracy determines reward; get policy gradient to update the controller RNN
+
